@@ -1,0 +1,123 @@
+h2 {
+  font-family: "Montserrat";
+  font-weight: 700;
+  color: #fff;
+}
+.wrap-li {
+  display: flex;
+  align-items: center;
+  margin-left: 30px;
+  padding-right: 10px;
+}
+.symbol-info {
+  position: relative;
+  transform: rotate(-90deg);
+  font-weight: 900;
+  font-size: 25px;
+  color: #fff;
+  cursor: pointer;
+}
+.wrap {
+  display: flex;
+  align-items: center;
+}
+.header-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.item-list {
+  display: flex;
+  align-items: center;
+  list-style-type: none;
+}
+.item-list li {
+  padding: 0 7px;
+  color: #fff;
+}
+.item-list a {
+  font-family: "Montserrat";
+  text-decoration: none;
+  color: #fff;
+}
+.item-list a:hover {
+  padding-bottom: 10px;
+}
+.active {
+  padding-bottom: 5px; 
+  border-bottom: 1px solid rgb(94, 11, 11);
+}
+.control-of-show {
+  position: absolute;
+  top: 45px;
+  right: 70px;
+  border: 1px solid #424242;
+  background-color: #424242;
+  border-radius: 10px 0px 10px 10px;
+  padding: 25px 35px;
+}
+.show-icon a{
+  font-family: "Montserrat";
+  color: #fff;
+  text-decoration: none;
+  padding-left: 6px;
+  border-bottom: none;
+}
+.welcome-title {
+  text-align: center;
+  margin-top: 50px;
+}
+.show-wrap {
+  display: flex;
+  align-items: center;
+}
+.menu-burger-header {
+  display: none;
+}
+.menu-burger-style {
+  display: none;
+}
+
+@media screen and (max-width: 1180px) {
+  .control-of-show {
+    right: 0;
+  }
+}
+
+@media screen and (max-width: 690px) {
+  .item-list-none {
+    display: none;
+  }
+  .menu-burger-header {
+    position: relative;
+    display: block;
+  }
+  .menu-burger-style {
+    display: block;
+  }
+  .item-list {
+    position: absolute;
+    right: 157px;
+    top: 37px;
+    border: 1px solid #282828;
+    background-color: #424242;
+    border-radius: 10px 0 10px 10px;
+    padding: 5px 0 10px;
+    z-index: 100;
+    display: block;
+  }
+  .item-list li {
+    padding-bottom: 10px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .control-of-show {
+    padding: 15px 19px;
+  }
+  .item-list {
+    right: 120px;
+  }
+  h2 {
+    font-size: 15px;
+  }
+}

@@ -1,0 +1,344 @@
+.main {
+  margin-top: 80px;
+}
+.like {
+  border-radius: 10px;
+  padding: 5px 20px;
+  margin-right: 20px;
+}
+.btn {
+  background-color: unset;
+  border: none;
+  cursor: pointer;
+}
+.delete-title {
+  text-align: center;
+  color: #000;
+}
+.overlay {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background-color: rgba(41, 41, 41, 0.5);
+}
+.popup-post-info {
+  position: relative;
+  bottom: 10px;
+  font-weight: 800;
+  font-size: 30px;
+  color: #fff;
+  background-color: unset;
+  border: none;
+  font-weight: 800;
+  font-size: 25px;
+  background-color: unset;
+  border: none;
+  opacity: 0.8;
+  cursor: pointer;
+}
+.post-title {
+  padding: 20px 10px 0;
+  color: #fff;
+  word-wrap: break-word;
+}
+.dislike {
+  border-radius: 10px;
+  padding: 5px 20px;
+}
+.active-btn {
+  background-color: rgb(105, 105, 105);
+}
+.border-post {
+  position: relative;
+  border: 1px solid #282829;
+  background-color: #282829;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+.wrapper-loading {
+  width: 200px;
+  height: 60px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.circle {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  border-radius: 50%;
+  background-color: #fff;
+  left: 15%;
+  transform-origin: 50%;
+  animation: circle 0.5s alternate infinite ease;
+}
+.main {
+  margin-top: 80px;
+}
+.main-container {
+  max-width: 100vh;
+  margin: 0 auto;
+}
+.add-post-btn {
+  text-align: center;
+  margin-bottom: 30px;
+}
+.add-btn {
+  background-color: #282828;
+  padding: 10px 30px;
+  color: #fff;
+  border-radius: 10px;
+  font-family: 'Roboto';
+  font-weight: 700;
+  cursor: pointer;
+}
+.like-fill {
+  fill: '#fff'
+}
+
+.block-posts {
+  display: flex;
+  padding: 10px 10px 0;
+  justify-content: space-between;
+  border-bottom: 1px solid #424242;
+}
+.posts {
+  padding-bottom: 10px;
+}
+.posts h2 {
+  font-family: 'Montserrat';
+}
+.posts p {
+  font-family: 'Roboto';
+  font-weight: 400;
+}
+.popup-btn {
+  display: flex;
+  flex-direction: row-reverse;
+}
+.delete-icon {
+  position: relative;
+  cursor: pointer;
+  font-weight: 300;
+  font-size: 13px;
+  font-family: 'Montserrat';
+  color: #fff;
+  padding-bottom: 10px;
+}
+.control-of-posts {
+  position: relative;
+  bottom: 10px;
+  right: 10px;
+  border: 1px solid #424242;
+  background-color: #424242;
+  border-radius: 10px 0px 10px 10px;
+  padding: 15px;
+  margin-bottom: 10px;
+}
+.popup-style-position {
+  position: absolute;
+  right: 10px;
+  top: 0px;
+  z-index: 10;
+}
+
+.icon-wrap {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  padding: 20px 10px 10px;
+  border-top: 1px solid #424242;
+  margin-top: 20px;
+}
+.icon-like {
+  margin-right: 10px;
+}
+
+.wrapper-loading{
+  width:200px;
+  height:60px;
+  position: absolute;
+  left:50%;
+  top:50%;
+  transform: translate(-50%, -50%);
+}
+.circle{
+  width:20px;
+  height:20px;
+  position: absolute;
+  border-radius: 50%;
+  background-color: #fff;
+  left:15%;
+  transform-origin: 50%;
+  animation: circle 1s alternate infinite ease;
+}
+
+@keyframes circle{
+  0%{
+      top:60px;
+      height:5px;
+      border-radius: 50px 50px 25px 25px;
+      transform: scaleX(2);
+  }
+  40%{
+      height:20px;
+      border-radius: 50%;
+      transform: scaleX(1);
+  }
+  100%{
+      top:0%;
+  }
+}
+.circle:nth-child(2){
+  left:45%;
+  animation-delay: .2s;
+}
+.circle:nth-child(3){
+  left:auto;
+  right:15%;
+  animation-delay: .3s;
+}
+.shadow{
+  width:20px;
+  height:4px;
+  border-radius: 50%;
+  background-color: #fff;
+  position: absolute;
+  top:62px;
+  transform-origin: 50%;
+  z-index: -1;
+  left:15%;
+  filter: blur(1px);
+  animation: shadow .5s alternate infinite ease;
+}
+
+@keyframes shadow{
+  0%{
+      transform: scaleX(1.5);
+  }
+  40%{
+      transform: scaleX(1);
+      opacity: .7;
+  }
+  100%{
+      transform: scaleX(.2);
+      opacity: .4;
+  }
+}
+.shadow:nth-child(4){
+  left: 45%;
+  animation-delay: .2s
+}
+.shadow:nth-child(5){
+  left:auto;
+  right:15%;
+  animation-delay: .3s;
+}
+.wrapper span{
+  position: absolute;
+  top:75px;
+  font-family: 'Lato';
+  font-size: 20px;
+  letter-spacing: 12px;
+  color: #000;
+  left:15%;
+}
+
+
+/* Animation delete post */
+.spinner {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.blob {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border: 2px solid #fff; 
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+.top {
+    top: 0;
+    animation: blob-top 1s infinite ease-in;
+}
+.bottom {
+top: 100%;
+animation: blob-bottom 1s infinite ease-in;
+}
+.left {
+left: 0;
+animation: blob-left 1s infinite ease-in;
+} 
+.move-blob {
+background: #fff;
+top: 0;
+animation: blob-spinner-mover 1s infinite ease-in;
+}
+
+
+@keyframes blob-bottom {
+  25%, 50%, 75% {
+    top: 50%;
+    left: 100%;
+  }
+  100% {
+    top: 0;
+    left: 50%;
+  }
+}
+@keyframes blob-left {
+  25% {
+    top: 50%;
+    left: 0;
+  }
+  50%, 100% {
+    top: 100%;
+    left: 50%;
+  }
+}
+@keyframes blob-top {
+  50% {
+    top: 0;
+    left: 50%;
+  }
+  75%, 100% {
+    top: 50%;
+    left: 0;
+  }
+}
+
+@keyframes blob-spinner-mover {
+  0%, 100% {
+    top: 0;
+    left: 50%;
+  }
+  25% {
+    top: 50%;
+    left: 100%;
+  }
+  50% {
+    top: 100%;
+    left: 50%;
+  }
+  75% {
+    top: 50%;
+    left: 0;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .main-container {
+    margin: 0 5px 0 18px;
+  }
+}
