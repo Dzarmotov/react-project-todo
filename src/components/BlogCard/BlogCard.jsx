@@ -13,7 +13,8 @@ function BlogCard({
   disliked,
   dislikePost,
   handleShowEditForm,
-  handleSelectedPost
+  handleSelectedPost,
+  isAdmin
 }) {
 
   const [ showPopup, setShowPopup ] = React.useState(false)
@@ -58,8 +59,8 @@ function BlogCard({
         {
           showPopup && (
             <div className="control-of-posts">
-              <p className="delete-icon" onClick={deletePost}>Удалить пост</p>
-              <p className="delete-icon" onClick={showEdit}>Редактировать пост</p>
+              <p className="delete-icon" onClick={deletePost}>Удалить задачу</p>
+              <p className="delete-icon" onClick={showEdit}>Редактировать задачу</p>
             </div> 
           ) 
         }

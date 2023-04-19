@@ -1,11 +1,7 @@
 import React from 'react'
 import HighlightOffIcon from '@mui/icons-material/HighlightOff';
 
-function EditPosts({
-  handleShowEditFormHide,
-  getUpdatePost,
-  selectedPost
-}) {
+function EditPosts({ handleShowEditFormHide, getUpdatePost, selectedPost }) {
 
   
   const [ postTitle, setPostTitle ] = React.useState( selectedPost.title )
@@ -33,16 +29,28 @@ function EditPosts({
   }
 
 
+  React.useEffect(() => {
+    const handleEscape = (e) => {
+      if (e.key === 'Escape') {
+        handleShowEditFormHide()
+      }
+    }
+
+    window.addEventListener('keyup', handleEscape)
+
+    return () => window.removeEventListener('keyup', handleEscape)
+  }, [])
+
   return (
     <>
     <form className="appPostForm" onSubmit={saveUpdatePost}>
         <p className="hideBtn" onClick={handleShowEditFormHide}><HighlightOffIcon /></p>
-        <h2 className="formTitle">Редактирования поста</h2>
+        <h2 className="formTitle">Редактирования задачи</h2>
       <div>
         <input 
         type="text" 
         name="postTitle" 
-        placeholder="Заголовок поста"
+        placeholder="Заголовок задачи"
         value={postTitle}
         onChange={handlePostTitleChange}
         required
@@ -51,7 +59,7 @@ function EditPosts({
       <div>
         <textarea 
         name="postDescription" 
-        placeholder="Описание поста"
+        placeholder="Описание задачи"
         value={postDesc}
         onChange={handlePostDescChange}
         required

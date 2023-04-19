@@ -33,12 +33,12 @@ function AddNewPost({ addNewPost, handleShowAddHide }) {
     <>
     <form action="" className="appPostForm" >
         <button className="hideBtn" onClick={handleShowAddHide}><HighlightOffIcon /></button>
-        <h2 className="formTitle">Добавление нового поста</h2>
+        <h2 className="formTitle">Добавление задачи</h2>
       <div>
         <input 
         type="text" 
         name="postTitle" 
-        placeholder="Ваше имя"
+        placeholder="Название задачи"
         value={postTitle}
         onChange={handlePostTitleChange}
         required
@@ -47,14 +47,14 @@ function AddNewPost({ addNewPost, handleShowAddHide }) {
       <div>
         <textarea 
         name="postDescription" 
-        placeholder="Описание поста"
+        placeholder="Описание задачи"
         value={postDesc}
         onChange={handlePostDescChange}
         required
         />
       </div>
       <div>
-        <button type="submit" className="add-btn" onClick={createNewPost}>Добавить пост</button>
+        <button type="submit" className="add-btn" onClick={createNewPost}>Добавить задачу</button>
       </div>
     </form>
     <div className="overlay"></div>

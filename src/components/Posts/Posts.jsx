@@ -116,13 +116,13 @@ const Posts = () => {
 
   if (postsData.length === 0) {
     return (
-      <div class="wrapper-loading">
-        <div class="circle"></div>
-        <div class="circle"></div>
-        <div class="circle"></div>
-        <div class="shadow"></div>
-        <div class="shadow"></div>
-        <div class="shadow"></div>
+      <div className="overlay">
+        <div className="spinner">
+          <div className="blob top"></div>
+          <div className="blob bottom"></div>
+          <div className="blob left"></div>
+          <div className="blob move-blob"></div>
+        </div>
       </div>
     );
   }
@@ -132,7 +132,7 @@ const Posts = () => {
       <div className="main-container">
         <div className="add-post-btn">
           <button className="add-btn" onClick={handleShowAddForm}>
-            Добавить пост
+            Добавить задачу
           </button>
         </div>
 
@@ -169,12 +169,12 @@ const Posts = () => {
       </div>
       {isLoading && (
         <div className="overlay">
-          <div class="spinner">
-            <div class="blob top"></div>
-            <div class="blob bottom"></div>
-            <div class="blob left"></div>
+          <div className="spinner">
+            <div className="blob top"></div>
+            <div className="blob bottom"></div>
+            <div className="blob left"></div>
 
-            <div class="blob move-blob"></div>
+            <div className="blob move-blob"></div>
           </div>
         </div>
       )}

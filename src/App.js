@@ -20,6 +20,7 @@ function App() {
     return (localStorage.getItem('userName'))
   }
 
+
   return (
     <div className="wrapper">
       <Header setIsLoggedIn={setIsLoggedIn} isLoggedIn={isLoggedIn} userName={userName}/>     
@@ -28,11 +29,12 @@ function App() {
         <Routes>
           <Route path='/main' element={<Main />}/>
           <Route path='/posts' element={<Posts />}/>
-          <Route path='/loginPage' element={<LoginPage 
+          <Route path='*' element={<LoginPage 
           setIsLoggedIn={setIsLoggedIn} 
           isLoggedIn={isLoggedIn}
           setUserName={setUserName}
           />}/>
+
         </Routes>
       </main>
 

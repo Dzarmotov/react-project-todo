@@ -2,7 +2,7 @@ import React from 'react'
 import './loginPage.css'
 import Main from '../Main/Main'
 
-function LoginPage({ setIsLoggedIn, isLoggedIn, setUserName }) {
+function LoginPage({ setIsLoggedIn, isLoggedIn, setUserName, setIsAdmin }) {
 
     const [ login, setLogin ] = React.useState('')
     const [ password, setPassword ] = React.useState('')
